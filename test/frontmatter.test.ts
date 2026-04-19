@@ -38,16 +38,20 @@ describe("PrimerFrontmatter", () => {
     expect(PrimerFrontmatter.safeParse(bad).success).toBe(false);
   });
 
-  it("rejects unknown fields (strict)", () => {
-    const bad = {
+  it("tolerates unknown author-facing fields (passthrough)", () => {
+    // M9 schemas use .passthrough() so legacy author metadata (routing,
+    // audience notes, supersedes references) doesn't fail validation. The
+    // engine only reads the declared fields; extras ride along untouched.
+    const extended = {
       type: "primer",
       primer_name: "x",
       category: "tools",
       version: 1,
       updated: "2026-01-01",
-      extra: true,
+      audience: "planners",
+      supersedes: "older-primer",
     };
-    expect(PrimerFrontmatter.safeParse(bad).success).toBe(false);
+    expect(PrimerFrontmatter.safeParse(extended).success).toBe(true);
   });
 });
 

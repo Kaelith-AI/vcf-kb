@@ -57,9 +57,14 @@ for await (const full of walk(KB_ROOT)) {
   }
   const raw = await readFile(full, "utf8");
   const fm = matter(raw).data;
-  if ((fm as { type?: string }).type !== expectedType) {
+  const actualType = (fm as { type?: string }).type;
+  // Lenses accept both "lens" and legacy "review-lens" — the loader normalizes.
+  const typeOk =
+    actualType === expectedType ||
+    (expectedType === "lens" && actualType === "review-lens");
+  if (!typeOk) {
     process.stderr.write(
-      `validate-kb: ${rel} — frontmatter.type="${(fm as { type?: string }).type}" but dir implies "${expectedType}"\n`,
+      `validate-kb: ${rel} — frontmatter.type="${actualType}" but dir implies "${expectedType}"\n`,
     );
     errors++;
     continue;

@@ -7,6 +7,12 @@
 // Tag/slug shapes are intentionally the same as `@vcf/cli`'s TagSchema so
 // the primer tag-matching engine (M3.5) can do pure set operations with no
 // normalization per call.
+//
+// Schemas use `.passthrough()` rather than `.strict()` because the legacy
+// corpus (ported at M9) carries a handful of author-facing metadata fields
+// (status, last_reviewed, audience notes) that vary across docs. The
+// discriminating fields that the engine actually reads are required; the
+// rest is waved through.
 
 import { z } from "zod";
 
@@ -25,12 +31,12 @@ export const PrimerFrontmatter = z
     category: z.string().min(1).max(64),
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
-    status: z.enum(["draft-v1", "draft-v2", "stable", "deprecated"]).default("draft-v1"),
-    tags: z.array(Tag).max(32).default([]),
+    status: z.string().max(64).optional(),
+    tags: z.array(Tag).max(64).default([]),
     last_reviewed: IsoDateOrDate.optional(),
-    applies_to: z.array(Tag).max(32).default([]),
+    applies_to: z.array(z.string().max(64)).max(64).default([]),
   })
-  .strict();
+  .passthrough();
 
 export const BestPracticeFrontmatter = z
   .object({
@@ -39,35 +45,43 @@ export const BestPracticeFrontmatter = z
     category: z.string().min(1).max(64),
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
-    status: z.enum(["draft-v1", "draft-v2", "stable", "deprecated"]).default("draft-v1"),
-    tags: z.array(Tag).max(32).default([]),
+    status: z.string().max(64).optional(),
+    tags: z.array(Tag).max(64).default([]),
     last_reviewed: IsoDateOrDate.optional(),
-    applies_to: z.array(Tag).max(32).default([]),
+    applies_to: z.array(z.string().max(64)).max(64).default([]),
   })
-  .strict();
+  .passthrough();
 
+// Accepts both "lens" and legacy "review-lens". The KbKind emitted by
+// the loader normalizes to "lens".
 export const LensFrontmatter = z
   .object({
-    type: z.literal("lens"),
+    type: z.union([z.literal("lens"), z.literal("review-lens")]),
     lens_name: z.string().min(1).max(128),
-    focus: z.string().min(1).max(256),
+    focus: z.string().min(1).max(256).optional(),
+    category: z.string().max(64).optional(),
+    applies_to: z.array(z.string().max(64)).max(64).optional(),
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
-    tags: z.array(Tag).max(32).default([]),
+    status: z.string().max(64).optional(),
+    tags: z.array(Tag).max(64).default([]),
   })
-  .strict();
+  .passthrough();
 
+// Stage files may or may not ship with frontmatter. The port script injects
+// the machine-readable fields when missing so the server can always look up
+// (review_type, stage).
 export const StageFrontmatter = z
   .object({
     type: z.literal("review-stage"),
     review_type: z.enum(["code", "security", "production"]),
     stage: z.number().int().min(1).max(9),
-    stage_name: z.string().min(1).max(128),
+    stage_name: z.string().min(1).max(256),
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
-    tags: z.array(Tag).max(32).default([]),
+    tags: z.array(Tag).max(64).default([]),
   })
-  .strict();
+  .passthrough();
 
 export const ReviewerConfigFrontmatter = z
   .object({
@@ -76,7 +90,7 @@ export const ReviewerConfigFrontmatter = z
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
   })
-  .strict();
+  .passthrough();
 
 export const StandardFrontmatter = z
   .object({
@@ -85,7 +99,7 @@ export const StandardFrontmatter = z
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
   })
-  .strict();
+  .passthrough();
 
 /** Dispatch helper: pick schema by `type` field. */
 export const FrontmatterByType = {

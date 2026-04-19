@@ -6,5 +6,9 @@ export default defineConfig({
     include: ["test/**/*.test.ts"],
     clearMocks: true,
     testTimeout: 10_000,
+    // Match @vcf/cli: native bindings + linked test pairs do not play well
+    // with vitest's default worker pool. Single forked process is plenty.
+    pool: "forks",
+    poolOptions: { forks: { singleFork: true } },
   },
 });
