@@ -4,7 +4,7 @@
 // markdown file under kb/<kind>/ must pass the matching schema at load
 // time. The server refuses to serve a malformed entry.
 //
-// Tag/slug shapes are intentionally the same as `@vcf/cli`'s TagSchema so
+// Tag/slug shapes are intentionally the same as `@kaelith-labs/cli`'s TagSchema so
 // the primer tag-matching engine (M3.5) can do pure set operations with no
 // normalization per call.
 //

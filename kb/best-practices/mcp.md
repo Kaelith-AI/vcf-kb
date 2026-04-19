@@ -413,7 +413,7 @@ Launch via the client's `.mcp.json`:
   "mcpServers": {
     "vcf": {
       "command": "npx",
-      "args": ["-y", "@vcf/cli", "mcp", "--scope", "project"],
+      "args": ["-y", "@kaelith-labs/cli", "mcp", "--scope", "project"],
       "env": { "VCF_CONFIG": "${HOME}/.vcf/config.yaml" }
     }
   }
@@ -422,7 +422,7 @@ Launch via the client's `.mcp.json`:
 
 - Arguments should be explicit and static. Do not generate them dynamically per-session.
 - `env` values support `${VAR}` substitution in most clients; keep secrets there.
-- After global install, replace `npx -y @vcf/cli` with the installed binary name.
+- After global install, replace `npx -y @kaelith-labs/cli` with the installed binary name.
 - Global vs. project `.mcp.json`: document both. `vcf init` should auto-write the project-level file.
 
 ### Streamable HTTP
@@ -442,7 +442,7 @@ Pick one transport per MVP. Supporting both doubles testing surface and is rarel
 Your server's tool surface is a public contract as soon as one user depends on it.
 
 - **Server semver.** Breaking tool-schema changes = major bump. New optional fields = minor. Bug fixes = patch.
-- **Peer deps.** If you ship a content package (e.g. `@vcf/kb`) alongside the server, use a `peerDependencies` **range** so they can upgrade independently within a compatible band.
+- **Peer deps.** If you ship a content package (e.g. `@kaelith-labs/kb`) alongside the server, use a `peerDependencies` **range** so they can upgrade independently within a compatible band.
 - **Deprecation path.** Mark a tool `deprecated: true` in its description for one minor version before removing it. Log a warning (to stderr) when called.
 - **Schema evolution.** Add new fields as optional with sensible defaults. Never rename a field — add the new one and accept both for one major version.
 - **Pin the MCP SDK.** A minor SDK bump has broken transports in the past; test before upgrading.
