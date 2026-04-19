@@ -64,5 +64,5 @@ Apache-2.0 — see [LICENSE](./LICENSE) and [NOTICE](./NOTICE). Contributions we
 
 ## Links
 
-- Server + CLI: [github.com/Kaelith-AI/vcf-cli](https://github.com/Kaelith-AI/vcf-cli)
+- Server + CLI: [github.com/Kaelith-Labs/vcf-cli](https://github.com/Kaelith-Labs/vcf-cli)
 - CHANGELOG: [./CHANGELOG.md](./CHANGELOG.md)
