@@ -4,6 +4,7 @@ primer_name: skill-creation
 category: tools
 version: 1.0
 updated: 2026-03-17
+tags: [claude-code, skill-authoring, documentation]
 status: draft-v1
 ---
 

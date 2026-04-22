@@ -4,6 +4,7 @@ primer_name: llm-integration
 category: modifier
 version: 1.0
 updated: 2026-03-01
+tags: [llm, prompt-engineering, tool-use, structured-output]
 status: draft-v1
 ---
 

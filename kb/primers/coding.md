@@ -4,6 +4,7 @@ primer_name: coding
 category: type
 version: 1.0
 updated: 2026-03-01
+tags: [vibe-coding, maintainability, testability, determinism]
 status: draft-v1
 ---
 

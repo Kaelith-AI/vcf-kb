@@ -4,6 +4,7 @@ primer_name: mcp
 category: tools
 version: 2.0
 updated: 2026-04-18
+tags: [mcp, json-rpc, llm, api-design, token-economy, trust-boundary]
 status: draft-v2
 ---
 

@@ -4,6 +4,7 @@ primer_name: qdrant
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [qdrant, embeddings, rag]
 status: draft-v1
 ---
 

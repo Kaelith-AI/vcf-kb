@@ -4,6 +4,7 @@ best_practice_name: api-webhook-contract
 category: integration
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, webhook, schema-design]
 status: draft-v1
 ---
 

@@ -4,6 +4,7 @@ best_practice_name: content-moderation-safety
 category: community
 version: 1.0
 updated: 2026-03-01
+tags: [security, content-moderation]
 status: draft-v1
 ---
 

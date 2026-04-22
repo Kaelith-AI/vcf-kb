@@ -4,6 +4,7 @@ best_practice_name: data-integrity
 category: software
 version: 1.0
 updated: 2026-03-01
+tags: [data-model, reliability, sqlite, migration]
 status: draft-v1
 ---
 

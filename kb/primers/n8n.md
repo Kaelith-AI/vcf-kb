@@ -4,6 +4,7 @@ primer_name: n8n
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [n8n, webhook, agent-orchestration]
 status: draft-v1
 ---
 

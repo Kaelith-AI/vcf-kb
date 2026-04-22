@@ -4,6 +4,7 @@ best_practice_name: cross-platform-installer
 category: runtime
 version: 1.0
 updated: 2026-03-01
+tags: [packaging, cross-platform, npm, homebrew]
 status: draft-v1
 ---
 

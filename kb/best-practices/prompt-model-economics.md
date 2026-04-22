@@ -4,6 +4,7 @@ best_practice_name: prompt-model-economics
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [token-economy, cost-efficiency, llm, prompt-engineering]
 status: draft-v1
 ---
 

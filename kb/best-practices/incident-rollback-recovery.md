@@ -4,6 +4,7 @@ best_practice_name: incident-rollback-recovery
 category: runtime
 version: 1.0
 updated: 2026-03-01
+tags: [incident-recovery, rollback, production]
 status: draft-v1
 ---
 

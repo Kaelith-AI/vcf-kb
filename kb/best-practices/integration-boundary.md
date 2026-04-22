@@ -4,6 +4,7 @@ best_practice_name: integration-boundary
 category: software
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, trust-boundary]
 status: draft-v1
 ---
 

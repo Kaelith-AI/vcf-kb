@@ -4,6 +4,7 @@ best_practice_name: automated-agents
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [llm, agent-orchestration, tool-use]
 status: draft-v1
 ---
 

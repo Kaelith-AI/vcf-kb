@@ -4,6 +4,7 @@ best_practice_name: community-moderation-operations
 category: community
 version: 1.0
 updated: 2026-03-01
+tags: [content-moderation]
 status: draft-v1
 ---
 

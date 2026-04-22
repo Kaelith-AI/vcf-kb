@@ -4,6 +4,7 @@ primer_name: vibe-coding
 category: type
 version: 1.0
 updated: 2026-04-18
+tags: [vibe-coding, project-planning, api-design]
 status: draft-v1
 ---
 

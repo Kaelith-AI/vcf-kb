@@ -4,6 +4,7 @@ best_practice_name: llm-integration
 category: ai
 version: 2.0
 updated: 2026-03-01
+tags: [llm, prompt-engineering, tool-use]
 status: draft-v2
 ---
 

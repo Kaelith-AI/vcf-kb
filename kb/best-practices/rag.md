@@ -4,6 +4,7 @@ best_practice_name: rag
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [rag, embeddings, llm]
 status: draft-v1
 ---
 

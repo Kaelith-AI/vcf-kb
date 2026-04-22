@@ -4,6 +4,7 @@ best_practice_name: mcp
 category: ai
 version: 2.0
 updated: 2026-04-18
+tags: [mcp, json-rpc, llm, api-design, token-economy]
 status: draft-v2
 ---
 

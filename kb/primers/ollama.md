@@ -4,6 +4,7 @@ primer_name: ollama
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [ollama, llm, local-inference, node]
 status: draft-v1
 ---
 

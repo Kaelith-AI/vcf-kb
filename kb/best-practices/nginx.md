@@ -4,6 +4,7 @@ best_practice_name: nginx
 category: runtime
 version: 1.0
 updated: 2026-03-01
+tags: [nginx, production]
 status: draft-v1
 ---
 

@@ -4,6 +4,7 @@ best_practice_name: systemd
 category: runtime
 version: 1.0
 updated: 2026-03-01
+tags: [systemd, production]
 status: draft-v1
 ---
 

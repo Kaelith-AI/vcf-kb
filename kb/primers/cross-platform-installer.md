@@ -4,6 +4,7 @@ primer_name: cross-platform-installer
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [packaging, cross-platform, cli-ux, npm, homebrew]
 status: draft-v1
 ---
 

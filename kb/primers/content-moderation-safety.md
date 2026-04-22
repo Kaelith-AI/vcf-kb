@@ -4,6 +4,7 @@ primer_name: content-moderation-safety
 category: type
 version: 1.0
 updated: 2026-03-01
+tags: [security, content-moderation, trust-boundary]
 status: draft-v1
 ---
 

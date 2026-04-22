@@ -4,6 +4,7 @@ primer_name: library-sdk
 category: type
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, packaging, npm, dx]
 status: draft-v1
 ---
 

@@ -4,6 +4,7 @@ best_practice_name: discord
 category: community
 version: 1.0
 updated: 2026-03-01
+tags: [discord, webhook]
 status: draft-v1
 ---
 

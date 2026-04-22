@@ -4,6 +4,7 @@ primer_name: project-planning
 category: universal
 version: 1.0
 updated: 2026-03-01
+tags: [project-planning, vibe-coding, documentation]
 status: draft-v1
 ---
 

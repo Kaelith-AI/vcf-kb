@@ -4,6 +4,7 @@ primer_name: production
 category: type
 version: 1.0
 updated: 2026-03-01
+tags: [production, reliability, observability, incident-recovery]
 status: draft-v1
 ---
 

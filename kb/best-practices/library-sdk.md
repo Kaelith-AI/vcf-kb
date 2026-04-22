@@ -4,6 +4,7 @@ best_practice_name: library-sdk
 category: software
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, packaging, npm, dx]
 status: draft-v1
 ---
 

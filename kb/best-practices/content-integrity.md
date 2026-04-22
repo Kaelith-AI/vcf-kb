@@ -4,6 +4,7 @@ best_practice_name: content-integrity
 category: content
 version: 1.0
 updated: 2026-03-01
+tags: [content-moderation, trust-boundary]
 status: draft-v1
 ---
 

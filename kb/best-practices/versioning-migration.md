@@ -4,6 +4,7 @@ best_practice_name: versioning-migration
 category: software
 version: 1.0
 updated: 2026-03-01
+tags: [versioning, migration, release]
 status: draft-v1
 ---
 

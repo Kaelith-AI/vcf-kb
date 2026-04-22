@@ -4,6 +4,7 @@ best_practice_name: legal-claims-messaging
 category: content
 version: 1.0
 updated: 2026-03-01
+tags: [branding, documentation]
 status: draft-v1
 ---
 

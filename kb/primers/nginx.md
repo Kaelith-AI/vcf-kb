@@ -4,6 +4,7 @@ primer_name: nginx
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [nginx, production, reliability]
 status: draft-v1
 ---
 

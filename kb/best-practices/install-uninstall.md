@@ -4,6 +4,7 @@ best_practice_name: install-uninstall
 category: deployment
 version: 1.0
 updated: 2026-03-01
+tags: [packaging, cli-ux, cross-platform]
 status: draft-v1
 ---
 

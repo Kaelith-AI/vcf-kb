@@ -4,6 +4,7 @@ best_practice_name: named-actions-pattern
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, naming]
 status: draft-v1
 ---
 

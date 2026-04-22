@@ -4,6 +4,7 @@ primer_name: named-actions-pattern
 category: modifier
 version: 1.0
 updated: 2026-03-01
+tags: [api-design, naming, structured-output]
 status: draft-v1
 ---
 

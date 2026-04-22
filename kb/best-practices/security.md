@@ -4,6 +4,7 @@ best_practice_name: security
 category: software
 version: 2.0
 updated: 2026-03-01
+tags: [security, trust-boundary, supply-chain, redaction]
 status: draft-v2
 ---
 

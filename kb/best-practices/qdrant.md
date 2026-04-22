@@ -4,6 +4,7 @@ best_practice_name: qdrant
 category: retrieval
 version: 1.0
 updated: 2026-03-01
+tags: [qdrant, embeddings, rag]
 status: draft-v1
 ---
 

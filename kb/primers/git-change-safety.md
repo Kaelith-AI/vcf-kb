@@ -4,6 +4,7 @@ primer_name: git-change-safety
 category: universal
 version: 1.0
 updated: 2026-03-01
+tags: [release, versioning, vibe-coding]
 status: draft-v1
 ---
 

@@ -4,6 +4,7 @@ best_practice_name: youtube-media-channel
 category: content
 version: 1.0
 updated: 2026-03-01
+tags: [branding, content-moderation]
 status: draft-v1
 ---
 

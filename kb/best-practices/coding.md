@@ -4,6 +4,7 @@ best_practice_name: coding
 category: software
 version: 2.0
 updated: 2026-03-01
+tags: [vibe-coding, maintainability, testability]
 status: draft-v2
 ---
 

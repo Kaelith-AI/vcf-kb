@@ -4,6 +4,7 @@ best_practice_name: kaelith-software-identity
 category: universal
 version: 1.0
 updated: 2026-03-01
+tags: [branding]
 status: draft-v1
 ---
 

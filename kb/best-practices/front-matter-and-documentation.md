@@ -4,6 +4,7 @@ best_practice_name: front-matter-and-documentation
 category: universal
 version: 1.0
 updated: 2026-03-01
+tags: [documentation, schema-design]
 status: draft-v1
 ---
 

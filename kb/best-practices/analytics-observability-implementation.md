@@ -4,6 +4,7 @@ best_practice_name: analytics-observability-implementation
 category: operations
 version: 1.0
 updated: 2026-03-01
+tags: [observability, monitoring, production]
 status: draft-v1
 ---
 

@@ -4,6 +4,7 @@ best_practice_name: ollama-local-llm
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [ollama, llm, local-inference]
 status: draft-v1
 ---
 

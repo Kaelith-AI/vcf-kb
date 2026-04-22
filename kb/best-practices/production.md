@@ -4,6 +4,7 @@ best_practice_name: production
 category: software
 version: 2.0
 updated: 2026-03-01
+tags: [production, reliability, observability]
 status: draft-v2
 ---
 

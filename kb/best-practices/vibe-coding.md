@@ -4,6 +4,7 @@ best_practice_name: vibe-coding
 category: software
 version: 1.0
 updated: 2026-04-18
+tags: [vibe-coding, project-planning]
 status: draft-v1
 ---
 

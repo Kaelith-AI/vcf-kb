@@ -4,6 +4,7 @@ best_practice_name: claude-code-coding-agent
 category: ai
 version: 1.0
 updated: 2026-03-01
+tags: [claude-code, agent-orchestration, skill-authoring]
 status: draft-v1
 ---
 

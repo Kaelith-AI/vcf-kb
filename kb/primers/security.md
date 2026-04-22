@@ -4,6 +4,7 @@ primer_name: security
 category: type
 version: 1.0
 updated: 2026-03-01
+tags: [security, trust-boundary, redaction, supply-chain]
 status: draft-v1
 ---
 

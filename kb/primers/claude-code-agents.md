@@ -4,6 +4,7 @@ primer_name: claude-code-agents
 category: toolchain
 version: 1.0
 updated: 2026-03-01
+tags: [claude-code, llm, agent-orchestration, skill-authoring]
 status: draft-v1
 ---
 

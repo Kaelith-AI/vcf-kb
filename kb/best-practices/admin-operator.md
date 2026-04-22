@@ -4,6 +4,7 @@ best_practice_name: admin-operator
 category: software
 version: 1.0
 updated: 2026-03-01
+tags: [cli-ux, production, monitoring]
 status: draft-v1
 ---
 
