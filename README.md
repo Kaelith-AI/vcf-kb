@@ -2,7 +2,7 @@
 
 The content half of the **Vibe Coding Framework MCP**: primers (discipline layer — _why_), best-practices (mechanics layer — _how_), lenses (focused review perspectives), review stages (27 total), reviewer configs, standards. Zero runtime code — this is a versioned markdown corpus that `@kaelith-labs/cli` reads through `vcf init` and `vcf update-primers`.
 
-Current published version on npm: **0.0.2-alpha.0**. Source tracks ahead of that; a new publish is pending.
+Current published version on npm: **0.0.2-alpha.0**.
 
 ## What's inside
 
@@ -17,9 +17,13 @@ kb/
     production/          9 files   Stages 1–9 (service-def → governance)
   reviewers/             9 files   reviewer-{code,security,production}.md +
                                    .frontier.md + .local.md variants each
-  standards/             3 files   company-standards.md, tag-vocabulary.md,
-                                   vibe-coding-primer.md
+  standards/             6 files   tag-vocabulary.md, vibe-coding-primer.md +
+                                   company-standards.example.md (operator template) +
+                                   design-system.example.md, brand.example.md,
+                                   privacy.example.md (niche sub-standard stubs)
 ```
+
+The `.example.md` stubs in `standards/` are operator templates. Run `vcf standards init [kinds...]` to copy them into `~/.vcf/kb/standards/<kind>.md` (stripping `.example`). The `ship_audit` company-standards pass reads only from `~/.vcf/kb/standards/company-standards.md`; if the file is absent, that pass skips with an informational hint to run `vcf standards init`.
 
 ## Delivery model (seed-and-fork)
 
