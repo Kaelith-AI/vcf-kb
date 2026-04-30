@@ -71,12 +71,28 @@ export const LensFrontmatter = z
 // Stage files may or may not ship with frontmatter. The port script injects
 // the machine-readable fields when missing so the server can always look up
 // (review_type, stage).
+//
+// review_type / reviewer_type accept any kebab-slug — the source of truth
+// for "which review types exist" is config.review.categories on the
+// operator's side. Hardcoding an enum here meant new types added via
+// review_type_create couldn't pass validation; bumping the schema for
+// every new type is exactly the wrong direction. Schema now validates
+// shape (kebab-slug); config validates *which* slugs are routable.
+const ReviewTypeSlug = z
+  .string()
+  .min(1)
+  .max(64)
+  .regex(/^[a-z][a-z0-9-]*$/, "review_type must be a lowercase kebab-slug");
+
 export const StageFrontmatter = z
   .object({
     type: z.literal("review-stage"),
-    review_type: z.enum(["code", "security", "production"]),
-    stage: z.number().int().min(1).max(9),
-    stage_name: z.string().min(1).max(256),
+    review_type: ReviewTypeSlug,
+    stage: z.number().int().min(1).max(15),
+    // Optional — most files include it, but agent-generated drafts may
+    // carry the human-readable name in `title` instead. Loader can
+    // synthesize a default from `title` when absent.
+    stage_name: z.string().min(1).max(256).optional(),
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
     tags: z.array(Tag).max(64).default([]),
@@ -86,7 +102,7 @@ export const StageFrontmatter = z
 export const ReviewerConfigFrontmatter = z
   .object({
     type: z.literal("reviewer-config"),
-    reviewer_type: z.enum(["code", "security", "production"]),
+    reviewer_type: ReviewTypeSlug,
     version: z.union([z.string(), z.number()]),
     updated: IsoDateOrDate,
   })

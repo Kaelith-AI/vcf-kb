@@ -68,17 +68,43 @@ describe("StageFrontmatter", () => {
     expect(StageFrontmatter.parse(ok).stage).toBe(1);
   });
 
-  it("rejects stage > 9", () => {
+  it("rejects stage > 15 (review_type_create's suggested_step_count cap)", () => {
     expect(
       StageFrontmatter.safeParse({
         type: "review-stage",
         review_type: "code",
-        stage: 10,
+        stage: 16,
         stage_name: "x",
         version: 1,
         updated: "2026-01-01",
       }).success,
     ).toBe(false);
+  });
+
+  it("accepts a custom kebab-slug review_type (not enum-locked)", () => {
+    // 0.7 — config.review.categories is the source of truth for which
+    // slugs are routable; the schema only enforces shape (kebab-slug).
+    expect(
+      StageFrontmatter.safeParse({
+        type: "review-stage",
+        review_type: "vibe",
+        stage: 1,
+        version: 0.1,
+        updated: "2026-04-30",
+      }).success,
+    ).toBe(true);
+  });
+
+  it("accepts stage_name as optional (agent drafts often emit `title` only)", () => {
+    expect(
+      StageFrontmatter.safeParse({
+        type: "review-stage",
+        review_type: "vibe",
+        stage: 5,
+        version: 0.1,
+        updated: "2026-04-30",
+      }).success,
+    ).toBe(true);
   });
 });
 
